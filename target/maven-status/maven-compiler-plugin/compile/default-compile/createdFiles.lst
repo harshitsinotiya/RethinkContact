@@ -1,8 +1,0 @@
-com\example\demo\service\EmailService.class
-com\example\demo\entity\Contact.class
-com\example\demo\service\ContactService.class
-com\example\SpringBootApplicationMain.class
-com\example\demo\repository\ContactRepo.class
-com\example\demo\exception\GlobalExceptionHandler.class
-com\example\demo\controller\ContactController.class
-com\example\demo\controller\GlobalCorsConfig.class
