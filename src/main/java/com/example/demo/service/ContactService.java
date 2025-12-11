@@ -15,16 +15,18 @@ public class ContactService {
     @Autowired
     private EmailService emailService;
 
-    public Contact saveProject(Contact project) {
-        Contact savedContact = repo.save(project);
-        
-        // Send email in background (non-blocking 🚀)
-        emailService.sendEmail(savedContact);
+    public Contact saveContact(Contact contact) {
 
-        return savedContact;
+        // Save contact in DB
+        Contact saved = repo.save(contact);
+
+        // Send email asynchronously
+        emailService.sendEmail(saved);
+
+        return saved;
     }
 
-    public Contact getContactById() {
-        return repo.findById(1L).orElse(null);
+    public Contact getContactById(Long id) {
+        return repo.findById(id).orElse(null);
     }
 }
