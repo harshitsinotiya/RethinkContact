@@ -14,11 +14,13 @@ public class EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    @Async
+    @Async  // sends email in background
     public void sendEmail(Contact contact) {
+
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo(contact.getEmail());
         message.setCc("20.rethink.25@gmail.com");
+
         message.setSubject("Your Detail Registered: " + contact.getName());
         message.setText(
             "Your Details:\n\n" +
