@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build /app/target/RethinkDigitalSolutionContact.jar app.jar
 
 # Expose Spring Boot default port
-EXPOSE 8081
+
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
