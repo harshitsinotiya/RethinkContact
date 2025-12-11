@@ -26,7 +26,7 @@ public class ContactService {
     }
 
     // Fetch by ID
-    public Contact getContactById(Long id) {
-        return repo.findById(id).orElse(null);
+    public Contact getContactById() {
+         return repo.findById(1L).orElse(null);
     }
 }
